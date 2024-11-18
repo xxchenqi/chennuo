@@ -212,8 +212,10 @@
 			setTimeout(function () {
 				$('.show_info').removeClass(_in[rand_in]);
 				// 更改展示的图片
+				var randomNum = Math.floor(Math.random() * 9) + 1;
+				var imagePath = "img/" + randomNum + ".jpg";
 				var img = document.getElementsByClassName('element')[CurPersonNum].getElementsByTagName('img')[0];
-				img.setAttribute('src', 'img/a.jpg');
+				img.setAttribute('src', imagePath);
 				++CurPersonNum;
 				setTimeout(function () {
 					$('.show_info').addClass(_out[rand_out]);
